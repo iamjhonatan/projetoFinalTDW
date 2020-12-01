@@ -1,0 +1,18 @@
+
+.gallery ul {
+    display: flex;
+    flex-arap: wrap;
+    list-style-type: none;
+}
+
+.gallery li{
+    height: 40vh;
+    flex-grow: 1;
+}
+
+.gallery img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
