@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './page/App';
+import App from './page/App';
 //import PostForm from './page/PostForm';
 import * as serviceWorker from './serviceWorker';
 import LoginForm from "./page/LoginForm";
 
 ReactDOM.render(
   <React.StrictMode>
-    <LoginForm />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

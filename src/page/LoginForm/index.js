@@ -1,11 +1,12 @@
 import React from 'react';
 import './LoginForm.css';
 import {auth} from '../../firebase';
-import {HashRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom";
+import {HashRouter as Router, Switch, Route, Link, Redirect, withRouter} from "react-router-dom";
+
 
 class LoginForm extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -19,17 +20,13 @@ class LoginForm extends React.Component {
         this.onCreate = this.onCreate.bind(this);
     }
 
-    renderLoggedIn(){
-        let {user} = this.state;
+    renderLoggedIn() {
+        //let {user} = this.state;
+        this.props.history.push('/Menu');
 
-        return (
-            <div>
-                {`Bem-vindo, ${user.email}!`}
-            </div>
-        );
     }
 
-    onUpdate(e){
+    onUpdate(e) {
         let obj = {};
         obj[e.target.name] = e.target.value;
         this.setState(obj)
@@ -49,12 +46,14 @@ class LoginForm extends React.Component {
                     user: {
                         name: user.displayName,
                         email: user.email
+                    }
                 }
-            });
-        }).catch(err => {
+            )
+            }).catch(err => {
             this.setState({message: err.code + " " + err.message});
         });
     }
+
 
     onCreate() {
         let {txtEmail, txtPassword} = this.state;
@@ -93,4 +92,4 @@ class LoginForm extends React.Component {
     }
 }
 
-export default LoginForm;
+export default withRouter (LoginForm);
