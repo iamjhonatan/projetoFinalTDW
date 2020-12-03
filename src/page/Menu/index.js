@@ -1,6 +1,8 @@
 import React from 'react';
 import {HashRouter as Router, Link} from "react-router-dom";
 import LoginForm from "../LoginForm";
+import Gallery from "../Gallery";
+import PostForm from "../PostForm";
 
 function Menu(props){
     return (

@@ -21,8 +21,9 @@ class LoginForm extends React.Component {
     }
 
     renderLoggedIn() {
-        //let {user} = this.state;
+        let {user} = this.state;
         this.props.history.push('/Menu');
+        return (<h1>Teste</h1>);
 
     }
 

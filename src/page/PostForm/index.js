@@ -58,14 +58,14 @@ function PostForm(props) {
     return (
         <div>
             <Clock />
-            <p><label htmlFor="txtTitle">Title: </label><input name="title" value={inputs.title} type="text" onChange={onInputChange}/></p>
-            <p><label htmlFor="txtBody">Body: </label></p>
+            <p><label htmlFor="txtTitle">Título: </label><input name="title" value={inputs.title} type="text" onChange={onInputChange}/></p>
+            <p><label htmlFor="txtBody">Post: </label></p>
             <p>
                 <textarea rows="10" name="body" value={inputs.body} onChange={onInputChange} />
             </p>
             <p><label htmlFor="txtTags">Tags: </label><input name="tags" value = {inputs.tags} type="text" onChange={onInputChange}/></p>
-            <p><input type="button" value="send" onClick={() => addPost(date, inputs)}/></p>
-            <p><Link to="/">Close</Link></p>
+            <p><input type="button" value="Postar" onClick={() => addPost(date, inputs)}/></p>
+            <p><Link to="/Menu">Fechar</Link></p>
             <p />
             <p>Preview</p>
             <div>

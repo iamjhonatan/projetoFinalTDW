@@ -6,6 +6,7 @@ import {HashRouter as Router, Switch, Route, Link, Redirect} from "react-router-
 import LoginForm from "./page/LoginForm";
 import Menu from "./page/Menu";
 import PrivateRoute from "./routes-private";
+import Gallery from "./page/Gallery";
 
 function routes(){
     return (
@@ -16,6 +17,7 @@ function routes(){
                     <PrivateRoute exact path="/posts/:id" component={PostForm} />
                     <Route exact path="/posts" component={PostList} />
                     <Route exact path="/menu" component={Menu} />
+                    <Route exact path="/gallery" component={Gallery}/>
                 </Switch>
             </Router>
         </div>
