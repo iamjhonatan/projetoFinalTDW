@@ -50,6 +50,7 @@ class LoginForm extends React.Component {
                     }
                 }
             )
+                localStorage.setItem('user',user.email);
             }).catch(err => {
             this.setState({message: err.code + " " + err.message});
         });

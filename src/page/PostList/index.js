@@ -31,12 +31,12 @@ class PostList extends React.Component
         return (
             <div>
                 <div>
-                    Filter: <input type="text" value={this.state.filter} onChange={this.filterChange}/>
+                    Filtro: <input type="text" value={this.state.filter} onChange={this.filterChange}/>
                 </div>
                 <div>
                     {posts.map(
                         p => <Post key={p.id} data={p}/> // o objeto P é o POST, tem o ID e passa como KEY na tag POST
-                    )};
+                    )}
                 </div>
             </div>
         );

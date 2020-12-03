@@ -38,7 +38,8 @@ function PostForm(props) {
         {
             title: "",
             body: "",
-            tags: ""
+            tags: "",
+            autor: localStorage.getItem('user')
         }
     );
     let date = useClock();

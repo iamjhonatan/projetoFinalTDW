@@ -7,7 +7,7 @@ function Post(props) {
 
     return (<article>
         <h1>{post.title}</h1>
-        <WrittenBy name={post.name} email={post.email} />
+        <WrittenBy name={post.autor} email={post.autor} />
         {post.body}
     </article>);
 }

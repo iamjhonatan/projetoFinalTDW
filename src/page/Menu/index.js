@@ -3,13 +3,14 @@ import {HashRouter as Router, Link} from "react-router-dom";
 import LoginForm from "../LoginForm";
 import Gallery from "../Gallery";
 import PostForm from "../PostForm";
+import "./Menu.css";
 
 function Menu(props){
     return (
         <p>
-            <p><Link to="/posts">Post list</Link></p>
-            <p><Link to="/posts/new">Write a new post</Link></p>
-            <p><Link to="/gallery">Photo gallery</Link></p>
+            <Link to="/posts">Lista de Posts | </Link>
+            <Link to="/posts/new">Escrever um novo Post | </Link>
+            <Link to="/gallery">Galeria</Link>
         </p>
     );
 }
