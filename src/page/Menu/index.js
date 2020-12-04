@@ -7,7 +7,7 @@ import "./Menu.css";
 
 function Menu(props){
     return (
-        <p>
+        <p class="container">
             <Link to="/posts">Lista de Posts | </Link>
             <Link to="/posts/new">Escrever um novo Post | </Link>
             <Link to="/gallery">Galeria</Link>

@@ -1,5 +1,6 @@
 import React from "react";
 import WrittenBy from "../WrittenBy";
+import './Post.css';
 
 
 function Post(props) {

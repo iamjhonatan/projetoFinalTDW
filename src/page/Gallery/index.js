@@ -14,7 +14,8 @@ class Gallery extends React.Component {
             posts: [],
             files: [],
             filesAutor:[],
-            imagens:[]
+            imagens:[],
+            like: false
         }
         this.onChoseFile = this.onChoseFile.bind(this);
         this.onUpload = this.onUpload.bind(this);
@@ -69,12 +70,8 @@ class Gallery extends React.Component {
                     if(f.customMetadata){
                         imagens[index1] = {img:i,autor:f.customMetadata.autor};
                     }
-
-
                 }
-
             });
-
         });
         this.setState({imagens});
 
@@ -83,6 +80,7 @@ class Gallery extends React.Component {
     onBack() {
         this.props.history.push("/Menu");
     }
+
 
 
     render() {
@@ -95,18 +93,19 @@ class Gallery extends React.Component {
                         <input type="file" name="txtFile" value={this.state.txtFile} onChange={this.onChoseFile}
                                accept=".jpg, .jpeg, .png"/>
                         <p>
-                            <input value="Enviar" className="btnUpload" type="button" onClick={this.onUpload}/>
+                            <input value="Upload" className="btnUpload" type="button" onClick={this.onUpload}/>
                             <input value="Voltar" type="button" onClick={this.onBack}/>
                         </p>
                     </p>
                 </div>
                 <div className="gallery">
                     <ul>
-
                         {  this.state.imagens.map(x=>{
-                            return (<li><img src={x.img} alt="photo"/>{x.autor}</li>)
-                        })
-
+                            return (<li>
+                                        <img src={x.img} alt="photo"/>{x.autor}
+                                        <p></p><input type="button" value="Like"/>
+                                    </li>);
+                            })
                         }
                     </ul>
                 </div>

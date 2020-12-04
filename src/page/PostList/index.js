@@ -1,6 +1,8 @@
 import React from 'react';
 import list from "../../dao";
 import Post from '../../component/Post';
+import './PostList.css';
+import {Link} from "react-router-dom";
 
 
 class PostList extends React.Component
@@ -33,11 +35,12 @@ class PostList extends React.Component
                 <div>
                     Filtro: <input type="text" value={this.state.filter} onChange={this.filterChange}/>
                 </div>
-                <div>
+                <div class="imagens">
                     {posts.map(
                         p => <Post key={p.id} data={p}/> // o objeto P é o POST, tem o ID e passa como KEY na tag POST
                     )}
                 </div>
+                <p><Link to="/Menu">Fechar</Link></p>
             </div>
         );
     }

@@ -3,6 +3,7 @@ import {db} from "../../firebase";
 import Post from "../../component/Post"
 import {Link, useParams} from "react-router-dom";
 import {Clock, useClock} from "../../component/Clock";
+import "./PostForm.css";
 
 function useInputs(initialState = {}) {
     const [inputs, setInputs] = useState(initialState);
@@ -57,7 +58,7 @@ function PostForm(props) {
     }, []);
 
     return (
-        <div>
+        <div class="container">
             <Clock />
             <p><label htmlFor="txtTitle">Título: </label><input name="title" value={inputs.title} type="text" onChange={onInputChange}/></p>
             <p><label htmlFor="txtBody">Post: </label></p>

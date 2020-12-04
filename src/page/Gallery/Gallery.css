@@ -12,8 +12,46 @@
 }
 
 .gallery img{
+
     max-height: 100%;
     max-width: 100%;
+
     object-fit: cover;
     vertical-align: bottom;
+    border: thin solid;
+    padding: 2px;
+    margin: 0px 10px 10px 0;
+    border-radius: 20px;
 }
+
+
+
+input[type=button]:hover{
+     background: #006699;
+    border:1px solid #990000;
+}
+
+input[type=button]{
+     background:#006699;
+     color:#ffffff;
+     margin: 2px;
+    border-radius: 20px;
+}
+
+
+input[type=file]:hover{
+    background: #006699;
+    border:1px solid #990000;
+}
+
+input[type=file]{
+    background:#006699;
+    color:#ffffff;
+    margin: 2px;
+    border-radius: 20px;
+}
+
+.fileChoser {
+    text-align: center;
+}
+
